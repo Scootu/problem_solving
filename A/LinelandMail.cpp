@@ -16,17 +16,17 @@ int main() {
     for (int i = 0; i < n; i++) {
         int mini, maxi;
 
-        // Compute min distance
+        
         if (i == 0) {
-            mini = abs(cities[i] - cities[i + 1]); // First city: only right neighbor
+            mini = abs(cities[i] - cities[i + 1]); 
         } else if (i == n - 1) {
-            mini = abs(cities[i] - cities[i - 1]); // Last city: only left neighbor
+            mini = abs(cities[i] - cities[i - 1]); 
         } else {
-            mini = min(abs(cities[i] - cities[i - 1]), abs(cities[i] - cities[i + 1])); // Middle cities: min of two neighbors
+            mini = min(abs(cities[i] - cities[i - 1]), abs(cities[i] - cities[i + 1])); 
         }
 
-        // Compute max distance
-        maxi = max(abs(cities[i] - cities[0]), abs(cities[i] - cities[n - 1])); // Max is always to first or last city
+       
+        maxi = max(abs(cities[i] - cities[0]), abs(cities[i] - cities[n - 1])); 
 
         cout << mini << " " << maxi << "\n";
     }
