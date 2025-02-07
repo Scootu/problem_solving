@@ -20,7 +20,7 @@ int main() {
     
     int my_sum = 0, count = 0;
     for (int i = 0; i < n; i++) {
-        my_sum += coins[i];
+        my_sum += coins[i]; // take the first largest coin 
         count++;
         if (my_sum > total_sum - my_sum) {
             cout << count << endl;
