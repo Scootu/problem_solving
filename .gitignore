@@ -1,4 +1,7 @@
-.exe 
-.o
-./idea
-./vscode
+# Ignore executable and object files
+*.exe
+*.o
+
+# Ignore IDE-related files and folders
+.idea/
+.vscode/
