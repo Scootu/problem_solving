@@ -1,20 +1,8 @@
 #include "BinaryTrees.h"
 #include <cstdlib>
 #include <cstdio>
-struct node
-{
-    int Data;
-    Tree left;
-    Tree right;
 
-public:
-    node(int value)
-    {
-        Data = value;
-        left = nullptr;
-        right = nullptr;
-    }
-};
+
 
 bool isTEmpty(Tree t)
 {
@@ -48,11 +36,10 @@ void printTree(Tree t)
             {
                 printf("%d -> %d\n", t->Data, leftChild(t)->Data);
             }
-             if (rightChild(t) != nullptr)
+            if (rightChild(t) != nullptr)
             {
                 printf("%d -> %d\n", t->Data, rightChild(t)->Data);
             }
         }
     }
-    
 }
