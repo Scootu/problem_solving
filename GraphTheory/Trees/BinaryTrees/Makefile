@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall -Wextra -std=c++11
 BIN = main.exe
-OBJ = main.o BinaryTrees.o
+OBJ = main.o BinaryTrees.o 
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@

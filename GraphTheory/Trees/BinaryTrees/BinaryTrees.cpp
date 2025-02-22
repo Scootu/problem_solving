@@ -2,8 +2,6 @@
 #include <cstdlib>
 #include <cstdio>
 
-
-
 bool isTEmpty(Tree t)
 {
     return (t == nullptr);
@@ -41,5 +39,15 @@ void printTree(Tree t)
                 printf("%d -> %d\n", t->Data, rightChild(t)->Data);
             }
         }
+    }
+}
+
+void DisplayP(Tree t)
+{
+    if (!isTEmpty(t))
+    {
+        printf("%d  ", t->Data);
+        DisplayP(leftChild(t));
+        DisplayP(rightChild(t));
     }
 }
