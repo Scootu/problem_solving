@@ -5,8 +5,9 @@
 using namespace std;
 
 int main()
-{
-    binaryTree();
+{ 
     BinaryTreeDFS();
+    binaryTree();
+   
     return 0;
 }

@@ -51,3 +51,17 @@ void DisplayP(Tree t)
         DisplayP(rightChild(t));
     }
 }
+void DisplayInOrder(Tree t){
+    if(!isTEmpty(t)){
+        DisplayInOrder(leftChild(t));
+        printf("%d  ",t->Data);
+        DisplayInOrder(rightChild(t));
+    }
+}
+void DisplayPostOrder(Tree t){
+    if(!isTEmpty(t)){
+        DisplayPostOrder(leftChild(t));
+        DisplayPostOrder(rightChild(t));
+        printf("%d  ",t->Data);
+    }
+}

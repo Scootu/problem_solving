@@ -29,4 +29,6 @@ Tree rightChild(Tree t);
 Tree newNode(int val);
 void printTree(Tree t);
 void DisplayP(Tree t);
+void DisplayInOrder(Tree t);
+void DisplayPostOrder(Tree t);
 #endif
