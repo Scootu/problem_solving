@@ -84,13 +84,18 @@ int main()
     int testCase = 1;
     while (cin >> gridsize)
     {
+        cin.ignore(); // Fix input handling
 
-        lp(i, gridsize) lp(j, gridsize)
+        lp(i, gridsize)
         {
-            char b;
-            cin >> b;
-            adjMatrix[i][j] = b;
+            string row;
+            cin >> row;
+            lp(j, gridsize)
+            {
+                adjMatrix[i][j] = row[j]; // Read input properly
+            }
         }
+
         memset(vis, 0, sizeof(vis));
         int pro = 0;
         lp(i, gridsize) lp(j, gridsize)
@@ -101,7 +106,7 @@ int main()
                 pro++;
             }
         }
-        printf("Image number %d contains %d war eagles.", testCase++, pro);
+        cout << "Image number " << testCase++ << " contains " << pro << " war eagles." << endl;
     }
 
     return 0;
